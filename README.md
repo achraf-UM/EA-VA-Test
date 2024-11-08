@@ -90,8 +90,45 @@ python.app
 
 ### Pour assurer le bon fonctionnement de l'application, remplissez la base de données à l'aide de ces API en utilisant POSTMAN.
 
+## Lexique APIs
+### + API Post http://127.0.0.1:5000/api/v1/lexique
+#### API pour ajouter des lexiques
+
+Corps de la requête (Body)
+L'API accepte deux formats d'entrée :
+
+Un seul lexique (objet JSON)
+
+```bash
+{
+    "title": "Exemple de titre",
+    "description": "Description du lexique",
+    "is_valid": true
+}
+```
+
+Plusieurs lexiques (tableau d'objets JSON)
+
+```bash
+[
+    {
+        "title": "Premier lexique",
+        "description": "Description du premier lexique",
+        "is_valid": true
+    },
+    {
+        "title": "Deuxième lexique",
+        "description": "Description du deuxième lexique",
+        "is_valid": false
+    }
+]
+```
+
+### + API GET http://127.0.0.1:5000/api/v1/lexique
+#### API pour récuperer des lexiques
+
 ## User APIs
-### API Post http://127.0.0.1:5000/api/v1/user
+### + API Post http://127.0.0.1:5000/api/v1/user
 
 API pour créer des utilisateurs
 
@@ -129,13 +166,150 @@ group_id	     1
 
 photo	         Sélectionnez votre image
 
-### API Get http://127.0.0.1:5000/api/v1/user/user_id
+### API Get http://127.0.0.1:5000/api/v1/user/{id_user}
 
 API pour récupérer des utilisateurs
 
 ## Supervisor APIs
 
-### API Post http://127.0.0.1:5000/api/v1/user
+### + API Post http://127.0.0.1:5000/api/v1/usersupervisor
+API pour ajouter un superviseur à un utilisateur
+
+Body :
+
+```bash
+{
+    "user_id": 1,
+    "supervisor_id": 2
+}
+```
+
+### + API GET http://127.0.0.1:5000/api/v1/usersupervisor/{id_user}
+API pour récuperer le superviseur d'un utilisateur
+
+### + API GET http://127.0.0.1:5000/api/v1/usersupervisor/apprenatsuivi/{id_user}
+API pour récuperer les apprenants d'un utilisateur
+
+## Division APIs
+
+### + API Post http://127.0.0.1:5000/api/v1/division
+
+#### API pour ajouter une division
+
+Corps de la requête (Body)
+L'API accepte cette format :
+
+Un seul lexique (objet JSON)
+
+```bash
+{
+   "message": "Division created successfully",
+    "id": 1
+}
+```
+
+### + API Get http://127.0.0.1:5000/api/v1/division/{division_id}
+
+#### API pour récuperer une division
+
+
+## Civilité APIs
+
+### + API Post http://127.0.0.1:5000/api/v1/civility
+
+#### API pour ajouter une civilité
+
+Corps de la requête (Body)
+L'API accepte cette format :
+
+Un seul lexique (objet JSON)
+
+```bash
+{
+   "create_user_id": 1,
+    "update_user_id": 1,
+    "title": "Monsieur",
+    "description": "Titre de civilité pour les hommes.",
+    "keywords": "Monsieur, Male",
+    "sort": 1,
+    "revision": 1,
+    "conditional": true
+}
+```
+
+### + API Get http://127.0.0.1:5000/api/v1/civility/{civility_id}
+
+#### API pour récuperer une civilité
+
+## Group APIs
+
+### + API Post http://127.0.0.1:5000/api/v1/group
+
+#### API pour ajouter un group
+
+Corps de la requête (Body)
+L'API accepte cette format :
+
+Un seul lexique (objet JSON)
+
+```bash
+{
+   "name": "Administrators",
+    "roles": ["admin", "editor"],
+    "description": "Groupe d'administrateurs et d'éditeurs.",
+    "is_valid": true
+}
+```
+
+### + API Get http://127.0.0.1:5000/api/v1/laboratory/{laboratory}
+
+#### API pour récuperer un group
+
+## Laboratory APIs
+
+### + API Post http://127.0.0.1:5000/api/v1/laboratory
+
+#### API pour ajouter un laboratory
+
+Corps de la requête (Body)
+L'API accepte cette format :
+
+Un seul lexique (objet JSON)
+
+```bash
+{
+    "slug": "laboratory-01",
+    "create_user_id": 1,
+    "update_user_id": 1,
+    "logo": "logo.png",
+    "url": "http://laboratory01.com",
+    "city": "Paris",
+    "address": "123 rue de Paris",
+    "address_bis": "App 45",
+    "phone": "+33 1 23 45 67 89",
+    "email": "contact@laboratory01.com",
+    "zip_code": "75001",
+    "title": "Laboratoire 01",
+    "description": "Description du laboratoire",
+    "keywords": "science, research, lab",
+    "sort": 1,
+    "revision": 1,
+    "is_valid": true,
+    "conditional": null,
+    "ladp_server_id": null,
+    "dashboard_blocks": null,
+    "mail_formation_ouverture": "opening@mail.com",
+    "mail_formation_relance": "reminder@mail.com",
+    "afficher_module_informations": true,
+    "afficher_formation_informations": false
+}
+```
+
+### + API Get http://127.0.0.1:5000/api/v1/laboratory/{laboratory_id}
+
+#### API pour récuperer un laboratory
+
+
 
 
 
