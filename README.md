@@ -34,12 +34,12 @@ Pour activer l'environnement virtuel, utilisez les commandes suivantes :
 macOS/Linux :
 Copier le code
 ```bash
-Copier le code
 source venv/bin/activate
-
 ```
+
 Windows :
 Copier le code
+
 ```bash
 venv\Scripts\activate
 ```
@@ -53,8 +53,8 @@ pip install -r requirements.txt
 5. Démarrer l'application
 Vous êtes maintenant prêt à démarrer l'application Flask :
 
-```bash
 Copier le code
+```bash
 # Si vous exécutez directement
 python.app
 ```
