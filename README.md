@@ -86,6 +86,53 @@ python.app
 ### http://localhost:5000
 
 
+# API 
+
+### Pour assurer le bon fonctionnement de l'application, remplissez la base de données à l'aide de ces API en utilisant POSTMAN.
+
+## User APIs
+### API Post http://127.0.0.1:5000/api/v1/user
+
+API pour créer des utilisateurs
+
+#### Créer 3 utilisateurs avec cette API
+
+
+
+Sélectionnez méthode POST.
+
+En-têtes (Headers)
+Postman gère automatiquement la plupart des en-têtes, mais assurez-vous que Content-Type est réglé sur multipart/form-data lors de l’ajout de fichiers.
+
+Corps de la Requête (Body)
+Sélectionnez Body > form-data, et ajoutez les paires clé-valeur suivantes. Assurez-vous de marquer photo comme File en cliquant sur le menu déroulant à côté du nom de la clé.
+
+Clé	            Valeur
+civility_id	    1
+firstname	      John
+lastname	      Doe
+username	      johndoe
+email	         john.doe@example.com
+laboratory_id	 1
+password	     password123
+division_id	   1
+group_id	     1
+photo	         Sélectionnez votre image
+
+### API Get http://127.0.0.1:5000/api/v1/user/user_id
+
+API pour récupérer des utilisateurs
+
+## Supervisor APIs
+
+### API Post http://127.0.0.1:5000/api/v1/user
+
+
+
+
+
+
+
 
 
 
