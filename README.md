@@ -1,67 +1,61 @@
-# Tairo Nuxt - Multipurpose Admin and Webapp Tailwind Template
+# FakeAPI
 
-[![cssninja-discord](https://img.shields.io/discord/785473098069311510?label=join%20us%20on%20discord&color=6944EC)](https://go.cssninja.io/discord)
+FakeAPI est une API basée sur Flask qui propose divers endpoints pour gérer les données utilisateurs, y compris le téléchargement et la visualisation d’images d’utilisateurs.
 
-## ▶️ Getting started
+## Installation du projet
 
-First of all, Thank you so much for purchasing this template and for being our loyal customer. You are awesome! You are entitled to get free lifetime updates to this product and support from the cssninjaStudio team directly. **Tairo** is a product built by [cssninjaStudio](https://cssninja.io/) and [Digisquad](https://digisquad.io/).
+##Requirement : Installer Python et Pip
 
-### Prerequisites
+### 1. Cloner le dépôt
 
-1. A recent web browser (Chrome, Edge, Firefox, ...)
-2. [Node.js LTS](https://nodejs.org/en/) _(LTS or Current version)_ installed
-3. Knowledge with [Typescript](https://github.com/microsoft/typescript) _(should not be installed globally)_
-4. Knowledge with [Tailwind CSS](https://tailwindcss.com/)
-5. (recommended) [VSCode](https://code.visualstudio.com/) with [Volar](https://marketplace.visualstudio.com/items?itemName=vue.volar)
-
-#### Install Node.js
-
-1. Check if you already have Node.js installed. Run this command in your terminal:
+Tout d'abord accéder au dossier :
 
 ```bash
-node -v
+cd FakeAPI
 ```
 
-If node is not installed on your machine, you can go to the official nodejs.org website, and choose the version depending on your operating system:
+2. Créer un environnement virtuel
+Il est recommandé de créer un environnement virtuel pour gérer les dépendances du projet :
 
-- <a href="https://nodejs.org/en/download/" target="_blank">Install Node.js and npm on Windows, Linux or Mac OSX</a>
-- <a href="https://github.com/nvm-sh/nvm" target="_blank">Or, install Node Version Manager to quickly install and use different versions of Node.js</a>
 
-2. Enable pnpm with corepack
+Copier le code
+```bash
+# Sur macOS/Linux
+python3 -m venv venv
+```
+```bash
+# Sur Windows
+python -m venv venv
+```
+
+3. Activer l'environnement virtuel
+Pour activer l'environnement virtuel, utilisez les commandes suivantes :
+
+macOS/Linux :
+Copier le code
+```bash
+Copier le code
+source venv/bin/activate
+
+```
+Windows :
+Copier le code
+```bash
+venv\Scripts\activate
+```
+4. Installer les dépendances
+Une fois l’environnement virtuel activé, installez les packages requis avec :
+Copier le code
+```bash
+pip install -r requirements.txt
+```
+
+5. Démarrer l'application
+Vous êtes maintenant prêt à démarrer l'application Flask :
 
 ```bash
-corepack enable
-corepack prepare pnpm@latest --activate
+Copier le code
+# Si vous exécutez directement
+python.app
 ```
 
-> _corepack is installed with node from **v16.13.x**, if your version is below, install it with: `npm install -g corepack`_
-
-To setup the template and start installing project dependencies, run:
-
-```bash
-pnpm install
-```
-
-> **Note:** This will install depenencies form all packages that matches with `pnpm-workspace.yaml`. If you need to clear all `node_modules`, you can use `pnpm clear:all` command.
-
-## 🔃 Run a development server
-
-To start the development server, run:
-
-```bash
-pnpm dev
-```
-
-This will run the `dev` script from the `package.json` file.
-
-> Access the Tairo frontend in your browser at [http://localhost:3000/](http://localhost:3000/)
-
-## 💡 What to do next ?
-
-Our online documentation is a great place to learn how to use Tairo.
-We try to keep it mostly up to date, so you can always find the latest information.
-
-- [Access Online Documentation](https://tairo.cssninja.io/documentation)
-- [Access Shuriken UI Documentation](https://shurikenui.com)
-
-> We also have a great [discord community](https://go.cssninja.io/discord) where you can ask questions and show your work.
