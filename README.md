@@ -108,15 +108,25 @@ Corps de la Requête (Body)
 Sélectionnez Body > form-data, et ajoutez les paires clé-valeur suivantes. Assurez-vous de marquer photo comme File en cliquant sur le menu déroulant à côté du nom de la clé.
 
 Clé	            Valeur
+
 civility_id	    1
+
 firstname	      John
+
 lastname	      Doe
+
 username	      johndoe
+
 email	         john.doe@example.com
+
 laboratory_id	 1
+
 password	     password123
+
 division_id	   1
+
 group_id	     1
+
 photo	         Sélectionnez votre image
 
 ### API Get http://127.0.0.1:5000/api/v1/user/user_id
