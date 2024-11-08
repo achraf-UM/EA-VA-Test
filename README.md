@@ -10,6 +10,7 @@ Copier le code
 cd .app
 ```
 
+
 2 .Installez les dépendances : Utilisez npm pour installer les dépendances du projet :
 ```bash
 pnpm install
