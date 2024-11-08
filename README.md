@@ -12,7 +12,7 @@ cd .app
 
 2 .Installez les dépendances : Utilisez npm pour installer les dépendances du projet :
 ```bash
-npm install
+pnpm install
 ```
 
 3. Lancez le projet : Pour démarrer le serveur de développement, utilisez la commande suivante
