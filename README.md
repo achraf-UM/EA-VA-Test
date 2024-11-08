@@ -203,8 +203,8 @@ Un seul lexique (objet JSON)
 
 ```bash
 {
-   "message": "Division created successfully",
-    "id": 1
+   "slug": "division-unique",
+    "title": "Nom de la Division"
 }
 ```
 
